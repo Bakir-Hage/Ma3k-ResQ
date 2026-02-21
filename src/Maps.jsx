@@ -22,7 +22,7 @@ export default function Maps(){
       onLoad={() => console.log("Maps API has loaded.")}
     >
       <Map
-        style={{ width: "200%", height: "500px" }}
+        style={{minWidth: "500px", width: "100%", height: "500px" }}
         defaultZoom={13}
         defaultCenter={{ lat:32.721274, lng:35.314566 }}
         mapId="5b35e6f259822ef481376d47"
