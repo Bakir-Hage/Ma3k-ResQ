@@ -1,9 +1,4 @@
-import EmergencyDispatch from "../components/emergencyDispatch/emergencyDispatch";
-
-export default function Home() {
-  return (
-    <>
-      <EmergencyDispatch />
-    </>
-  );
+function Home (){
+    return <h1>Home Page</h1>
 }
+export default Home;
