@@ -9,6 +9,7 @@ import {
   addDoc,
   where,
   deleteDoc,
+  query,
 } from "firebase/firestore";
 import { app, auth } from "./firebaseConnection";
 import {
@@ -44,7 +45,7 @@ export const signUpNewUser = async (
       password,
     );
     const UID = userCredential.user.uid;
-    await setDoc(doc(db, "users", UID), {
+    await setDoc(doc(db, "Users", UID), {
       location: location,
       phoneNumber: phoneNumber,
       userName: userName,
@@ -80,7 +81,7 @@ export const getUserInfo = async (UID) => {
     return { success: false, error: "Missing UID" };
   }
   try {
-    const docRef = doc(db, "users", UID);
+    const docRef = doc(db, "Users", UID);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       return { success: true, data: docSnap.data() };
@@ -100,7 +101,7 @@ export const updateUserLocation = async (UID, latitude, longitude) => {
   try {
     const location = new GeoPoint(latitude, longitude);
     await setDoc(
-      doc(db, "users", UID),
+      doc(db, "Users", UID),
       { location: location },
       { merge: true },
     );
@@ -196,8 +197,11 @@ export const getServicesByType = async (serviceType) => {
   }
   try {
     const servicesRef = collection(db, "Services");
-    const query = query(servicesRef, where("serviceType", "==", serviceType));
-    const querySnapshot = await getDocs(query);
+    const getQuery = query(
+      servicesRef,
+      where("serviceType", "==", serviceType),
+    );
+    const querySnapshot = await getDocs(getQuery);
     const services = querySnapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),

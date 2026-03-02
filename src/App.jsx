@@ -1,6 +1,8 @@
 import "./App.css";
 import ServiceCard from "./components/ServiceCard/ServiceCard";
 import LoginAndSignUP from "./components/LoginAndSignup/LoginAndSignUP";
+import EmergencyDispatch from "./components/emergencyDispatch/emergencyDispatch";
+import Footer from "./components/Footer/Footer";
 import Maps from "./Maps";
 import Home from "./pages/Home";
 
@@ -46,6 +48,9 @@ const centers = [
           onMap={() => window.open("https://maps.google.com")}
         />
       ))}
+      {/* <Maps /> */}
+      {/* <Home /> */}
+      <Footer />
     </>
   );
 }

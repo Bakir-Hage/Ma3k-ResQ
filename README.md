@@ -17,13 +17,13 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Firestore Collections
 
-- `users / UID`
+- `Users / UID`
   - `userName`
   - `phoneNumber`
   - `email`
   - `location`
 
-- `services / serviceID`
+- `Services / serviceID`
   - `userID`
   - `serviceName`
   - `serviceType`
