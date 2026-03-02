@@ -14,6 +14,7 @@ class Poi {
  const key = "AIzaSyB2HuCcYndLpsfINk4ExYaesv0Ts2yUvf4";
 
  const location = new Poi("كراج علي قاسم", { lat: 32.721274, lng: 35.314566 });
+ const location2 = new Poi("كراج ابو صخر", { lat: 32.721800, lng: 35.314500 });
 
 export default function Maps(){
   return (
@@ -35,7 +36,7 @@ export default function Maps(){
           )
         }
       >
-        <PioMarkers locations={[location]} />
+        <PioMarkers locations={[location, location2]} />
       </Map>
     </APIProvider>
   );
