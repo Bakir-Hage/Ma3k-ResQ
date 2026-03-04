@@ -1,28 +1,24 @@
-import React from "react";
+import "./ServiceListPage.css";
 import ServiceDetailsCard from "../components/ServiceDetailsCard/ServiceDetailsCard";
 
 const ServiceListPage = ({ categoryTitle, services }) => {
   return (
-    <div style={{ padding: "40px 80px" }}>
+    <section className="serviceList" aria-label={categoryTitle}>
+      <div className="serviceList__container">
+        <header className="serviceList__header">
+          <h1 className="serviceList__title">{categoryTitle}</h1>
+          <p className="serviceList__subtitle">
+            Found {services?.length || 0} services near you
+          </p>
+        </header>
 
-      {/* Header */}
-      <div style={{ marginBottom: "30px" }}>
-        <h1 style={{ fontSize: "32px", fontWeight: "700" }}>
-          {categoryTitle}
-        </h1>
-        <p style={{ color: "#666", marginTop: "8px" }}>
-          Found {services?.length || 0} services near you
-        </p>
+        <div className="serviceList__list">
+          {services?.map((service, index) => (
+            <ServiceDetailsCard key={index} {...service} />
+          ))}
+        </div>
       </div>
-
-      {/* Cards Container */}
-      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-        {services?.map((service, index) => (
-          <ServiceDetailsCard key={index} {...service} />
-        ))}
-      </div>
-
-    </div>
+    </section>
   );
 };
 

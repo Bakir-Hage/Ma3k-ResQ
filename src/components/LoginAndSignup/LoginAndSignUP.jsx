@@ -4,11 +4,11 @@ import "./signinandsignup.css";
 export default function LoginAndSignUP() {
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    password: '',
-    confirmPassword: ''
+    fullName: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
   });
 
   const handleChange = (e) => {
@@ -17,7 +17,6 @@ export default function LoginAndSignUP() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
   };
 
   return (
@@ -120,4 +119,4 @@ export default function LoginAndSignUP() {
       </div>
     </div>
   );
-};
+}

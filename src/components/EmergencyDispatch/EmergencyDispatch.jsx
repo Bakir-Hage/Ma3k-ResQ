@@ -24,7 +24,7 @@ export default function EmergencyDispatch() {
     },
   ];
   return (
-    <>
+    <section className="heroSection" aria-label="Emergency dispatch">
       <div className="hero-background">
         <img
           src="src/assets/Truck.jpg"
@@ -47,6 +47,6 @@ export default function EmergencyDispatch() {
         </div>
         <EmergencyButton emergencyServices={emergencyServices} />
       </div>
-    </>
+    </section>
   );
 }

@@ -3,23 +3,21 @@ import "./EmergencyButton.css";
 
 export default function EmergencyButton({ emergencyServices }) {
   return (
-    <>
-      <div className="services-grid">
-        {emergencyServices.map((service) => {
-          const Icon = service.icon;
-          return (
-            <button
-              key={service.title}
-              className={`service-button ${service.color}`}
-            >
-              <Icon className="service-icon" />
-              <Link to={`ServiceDetails/${service.type}`}>
-                <span className="service-label">{service.title}</span>
-              </Link>
-            </button>
-          );
-        })}
-      </div>
-    </>
+    <div className="emergency-services-grid">
+      {emergencyServices.map((service) => {
+        const Icon = service.icon;
+        return (
+          <Link
+            key={service.title}
+            to={`/ServiceDetails/${service.type}`}
+            className={`emergency-service-button ${service.color}`}
+            aria-label={service.title}
+          >
+            <Icon className="emergency-service-icon" aria-hidden="true" />
+            <span className="emergency-service-label">{service.title}</span>
+          </Link>
+        );
+      })}
+    </div>
   );
 }

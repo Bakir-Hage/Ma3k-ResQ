@@ -1,0 +1,28 @@
+/* App-wide layout + spacing system */
+
+:root {
+  --app-max-width: 80rem;
+  --app-pad-x: clamp(16px, 3vw, 24px);
+
+  /* Vertical rhythm */
+  --section-pad-y: clamp(56px, 7vw, 88px);
+  --hero-pad-top: clamp(48px, 8vw, 80px);
+  --hero-pad-bottom: clamp(64px, 10vw, 96px);
+  --footer-pad-y: clamp(40px, 6vw, 56px);
+}
+
+.appShell {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.appShell > footer {
+  flex-shrink: 0;
+}

@@ -1,73 +1,83 @@
-.services-grid {
+.emergency-services-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  max-width: 56rem;
+  gap: 1.25rem;
+  max-width: 62rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2.5rem;
 }
 
 @media (min-width: 768px) {
-  .services-grid {
+  .emergency-services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-bottom: 3rem;
+    gap: 1.5rem;
   }
 }
 
-.service-button {
+.emergency-service-button {
   color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+  text-decoration: none;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.5rem;
+  min-height: 5.25rem;
+  box-shadow: 0 14px 30px rgba(2, 6, 23, 0.28);
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  border: none;
-  cursor: pointer;
+  gap: 0.9rem;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
-  .service-button {
-    padding: 2rem;
+  .emergency-service-button {
+    padding: 1.5rem 1.75rem;
+    min-height: 6rem;
     gap: 1rem;
   }
 }
 
-.service-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 35px rgba(15, 23, 42, 0.35);
+.emergency-service-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(2, 6, 23, 0.34);
 }
 
-.service-button:active {
-  transform: scale(0.95);
+.emergency-service-button:active {
+  transform: translateY(0);
+  box-shadow: 0 12px 26px rgba(2, 6, 23, 0.28);
 }
 
-.service-label {
-  font-size: 1.125rem;
-  font-weight: 600;
+.emergency-service-button:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.65);
+  outline-offset: 4px;
+}
+
+.emergency-service-label {
+  font-size: 1.25rem;
+  line-height: 1.1;
 }
 
 @media (min-width: 768px) {
-  .service-label {
-    font-size: 1.5rem;
+  .emergency-service-label {
+    font-size: 1.6rem;
   }
 }
 
-.service-icon {
-  width: 2rem;
-  height: 2rem;
+.emergency-service-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 auto;
 }
 
 @media (min-width: 768px) {
-  .service-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+  .emergency-service-icon {
+    width: 2.75rem;
+    height: 2.75rem;
   }
 }
 
