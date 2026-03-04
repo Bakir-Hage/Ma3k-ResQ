@@ -2,10 +2,9 @@
 
 .emergency-section {
   width: 100%;
-
   background: linear-gradient(180deg, #F79300 0%, #E36A00 100%);
-  
-  padding: 80px 20px;
+  /* reduce top padding so it sits closer to previous section */
+  padding: 0 20px 80px;
 }
 
 .emergency-content {
@@ -76,7 +75,7 @@
 /* ========== Mobile (Responsive) ========== */
 @media (max-width: 768px) {
   .emergency-section {
-    padding: 60px 16px;
+    padding: 0 16px 60px;
   }
 
   .emergency-title {

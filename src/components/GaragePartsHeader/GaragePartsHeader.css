@@ -1,22 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* Page wrapper: was `min-h-screen bg-gray-50` */
 .garage-page {
-  min-height: 100vh;
-  background-color: #f9fafb; /* gray-50 */
+  background-color: #f9fafb;
+  padding: 0;
+  margin: 0;
 }
 
 /* Hero section: was `bg-slate-900 text-white py-12 md:py-20` */
 .garage-hero {
-  background-color: #0f172a; /* slate-900 */
+  background-color: #0f172a;
   color: #ffffff;
-  padding-top: 3rem; /* py-12 */
-  padding-bottom: 3rem;
-}
-
-@media (min-width: 768px) {
-  .garage-hero {
-    padding-top: 5rem; /* py-20 */
-    padding-bottom: 5rem;
-  }
+  padding: 0;
+  margin: 0;
 }
 
 /* Hero container: was `max-w-7xl mx-auto px-4 text-center` */
