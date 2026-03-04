@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import { Search } from "lucide-react";
 import "./PlacesCard.css";
-export default function PlacesCard({ services }) {
+export default function PlacesCard({ services }){
+ const navigate = useNavigate();
+ 
+  const handleViewService = (type) => {
+  navigate(`/ServiceListPage/${type}`);
+};
+
   return (
     <div className="services-grid">
       {services.map((service) => {

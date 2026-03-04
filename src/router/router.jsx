@@ -3,6 +3,7 @@ import App from "../App";
 import ServiceDetails from "../components/ServiceDetails/ServiceDetails";
 import Home from "../pages/Home";
 import GarageParts from "../pages/GarageParts";
+import ServiceListPage from "../pages/ServiceListPage";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
         path: "ServiceDetails/:serviceType",
         element: <ServiceDetails />,
       },
+    {
+      path: "ServiceListPage/:serviceType",
+      element: <ServiceListPage />,
+    },
+
       {
         path: "garage",
         element: <GarageParts />,
