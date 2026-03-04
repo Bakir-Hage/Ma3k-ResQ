@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { getServicesByType } from "../../config/firestoreLogic";
 import { useEffect, useState } from "react";
+import ServiceCard from "../ServiceCard/ServiceCard";
 
 export default function ServiceDetails() {
   const { serviceType } = useParams();
@@ -19,15 +20,7 @@ export default function ServiceDetails() {
 
   return (
     <>
-      {services.map((service) => {
-        return (
-          <div key={service.id}>
-            <h2>{service.serviceName}</h2>
-            <p>Type: {service.serviceType}</p>
-            <p>Status: {service.isOpen ? "Open" : "Closed"}</p>
-          </div>
-        );
-      })}
+      <ServiceCard services={services} />
     </>
   );
 }

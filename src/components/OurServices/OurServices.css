@@ -1,12 +1,13 @@
 .services-section {
-  padding-top: 3rem;
+  /* remove extra top padding to tighten space with previous section */
+  padding-top: 0;
   padding-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
   .services-section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 0;
+    padding-bottom: 4rem;
   }
 }
 
