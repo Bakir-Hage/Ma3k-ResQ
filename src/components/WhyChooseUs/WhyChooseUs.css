@@ -1,22 +1,23 @@
 /*  full section */
 .why {
-  background-color: #f3f4f6;
-  padding: 80px 20px;
+  background-color: #ffffff;
+  padding-block: var(--section-pad-y);
+  padding-inline: var(--app-pad-x);
 }
 
 /* container */
 .why__container {
-  max-width: 1200px;
+  max-width: var(--app-max-width);
   margin: 0 auto;
   text-align: center;
 }
 
 /* section title */
 .why__title {
-  font-size: 36px;
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
   font-weight: 700;
   color: #1f2937;
-  margin-bottom: 60px;
+  margin-bottom: clamp(2rem, 4vw, 3.75rem);
 }
 
 /* network cards */
@@ -93,12 +94,13 @@
 @media (max-width: 768px) {
 
   .why {
-    padding: 70px 20px;
+    padding-block: var(--section-pad-y);
+    padding-inline: var(--app-pad-x);
   }
 
   .why__title {
-    font-size: 30px;
-    margin-bottom: 50px;
+    font-size: clamp(1.625rem, 5vw, 1.875rem);
+    margin-bottom: clamp(1.75rem, 4.5vw, 3.125rem);
   }
 
   .why__grid {

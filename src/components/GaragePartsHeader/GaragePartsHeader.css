@@ -1,0 +1,62 @@
+/* Page wrapper: was `min-h-screen bg-gray-50` */
+.garage-page {
+  min-height: 100vh;
+  background-color: #f9fafb; /* gray-50 */
+}
+
+/* Hero section: was `bg-slate-900 text-white py-12 md:py-20` */
+.garage-hero {
+  background-color: #0f172a; /* slate-900 */
+  color: #ffffff;
+  padding-top: 3rem; /* py-12 */
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .garage-hero {
+    padding-top: 5rem; /* py-20 */
+    padding-bottom: 5rem;
+  }
+}
+
+/* Hero container: was `max-w-7xl mx-auto px-4 text-center` */
+.garage-hero-container {
+  max-width: 80rem; /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+  text-align: center;
+}
+
+/* Title: was `text-3xl md:text-5xl font-bold mb-4` */
+.garage-hero-title {
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .garage-hero-title {
+    font-size: 3rem; /* text-5xl */
+    line-height: 1;
+  }
+}
+
+/* Description: was `text-lg md:text-xl text-gray-300 max-w-2xl mx-auto` */
+.garage-hero-description {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  color: #d1d5db; /* gray-300 */
+  max-width: 42rem; /* max-w-2xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .garage-hero-description {
+    font-size: 1.25rem; /* text-xl */
+    line-height: 1.75rem;
+  }
+}

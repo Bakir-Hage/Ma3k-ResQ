@@ -1,0 +1,89 @@
+/* Header: was `bg-slate-900 text-white py-4 px-4 md:px-8 sticky top-0 z-50 shadow-lg` */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #0f172a; /* slate-900 */
+  color: #ffffff;
+  padding: 1rem 1rem; /* py-4 px-4 */
+  box-shadow:
+    0 10px 15px -3px rgba(15, 23, 42, 0.3),
+    0 4px 6px -4px rgba(15, 23, 42, 0.3);
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    padding-left: 2rem; /* md:px-8 */
+    padding-right: 2rem;
+  }
+}
+
+/* Container: was `max-w-7xl mx-auto flex items-center justify-between` */
+.header-container {
+  max-width: 80rem; /* ~7xl */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand link: was `flex items-center gap-2 hover:opacity-90 transition-opacity` */
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 2 */
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 150ms ease-in-out;
+}
+
+.brand-link:hover {
+  opacity: 0.9;
+}
+
+/* Icon wrapper: was `relative` */
+.brand-icon-wrapper {
+  position: relative;
+}
+
+/* Icon: was `w-8 h-8 text-amber-400` */
+.brand-icon {
+  width: 2rem; /* 8 */
+  height: 2rem;
+  color: #fbbf24; /* amber-400 */
+}
+
+/* Title: was `text-xl font-bold tracking-wide` */
+.brand-title {
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em; /* tracking-wide */
+}
+
+/* Desktop nav: was `hidden md:flex items-center gap-6` */
+.desktop-navigation {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-navigation {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* 6 */
+  }
+}
+
+/* Nav links: was `text-sm hover:text-amber-400 transition-colors` */
+.nav-link {
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem;
+  color: #e5e7eb; /* gray-200-ish on dark bg */
+  text-decoration: none;
+  transition: color 150ms ease-in-out;
+}
+
+.nav-link:hover {
+  color: #fbbf24; /* amber-400 */
+}

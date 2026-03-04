@@ -2,7 +2,7 @@ import "./OurServices.css";
 import { CiSearch } from "react-icons/ci";
 import { GoZap } from "react-icons/go";
 import { SlWrench } from "react-icons/sl";
-import ServiceCard from "../ServiceCard/ServiceCard";
+import PlacesCard from "../PlacesCard/PlacesCard";
 
 export default function OurServices() {
   const services = [
@@ -39,10 +39,7 @@ export default function OurServices() {
       <section className="services-section">
         <div className="services-container">
           <h2 className="services-heading">Our Services</h2>
-
-          <div className="services-grid">
-            <ServiceCard services={services} />
-          </div>
+          <PlacesCard services={services} />
         </div>
       </section>
     </>

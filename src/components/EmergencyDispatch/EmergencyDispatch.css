@@ -1,20 +1,19 @@
+.heroSection {
+  position: relative;
+  background-color: #020617;
+  overflow: clip;
+}
+
 .hero {
   position: relative;
   z-index: 10;
-  max-width: 80rem;
+  max-width: var(--app-max-width);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 3rem;
-  padding-bottom: 4rem;
-}
-
-@media (min-width: 768px) {
-  .hero {
-    padding-top: 5rem;
-    padding-bottom: 6rem;
-  }
+  padding-left: var(--app-pad-x);
+  padding-right: var(--app-pad-x);
+  padding-top: var(--hero-pad-top);
+  padding-bottom: var(--hero-pad-bottom);
 }
 
 .hero-content {

@@ -20,14 +20,6 @@ function ServiceDetailsCard({
       </div>
 
       <div className="service-info-row">
-        <div className="rating">
-          <Star
-            size={18}
-            strokeWidth={1.8}
-            className={numericRating > 0 ? "star-active" : "star-inactive"}
-          />
-          <span>{numericRating.toFixed(1)}</span>
-        </div>
 
         <div className="distance">
           <MapPin size={18} strokeWidth={1.8} />
