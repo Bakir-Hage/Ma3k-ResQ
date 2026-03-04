@@ -1,0 +1,80 @@
+.add-service-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.add-service-container {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.add-service-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0b1d3a;
+  margin-bottom: 10px;
+}
+
+.add-service-subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.add-service-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.add-service-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0b1d3a;
+}
+
+.add-service-form input,
+.add-service-form textarea,
+.add-service-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.add-service-form input:focus,
+.add-service-form textarea:focus,
+.add-service-form select:focus {
+  border-color: #ff8a00;
+}
+
+.add-service-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.add-service-button {
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #ff8a00;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-service-button:hover {
+  background: #e87900;
+}

@@ -1,7 +1,22 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./ServiceBanner.css";
 
-function ServiceBanner({ to = "/add-service" }) {
+function ServiceBanner() {
+  const navigate = useNavigate();
+
+  const handleAddService = () => {
+    // نتحقق إذا المستخدم مسجل دخول
+    const user = localStorage.getItem("user");
+
+    if (user) {
+      // إذا مسجل دخول
+      navigate("/add-service");
+    } else {
+      // إذا ليس مسجل دخول
+      navigate("/login");
+    }
+  };
+
   return (
     <section className="service-banner">
       <div className="service-container">
@@ -15,9 +30,9 @@ function ServiceBanner({ to = "/add-service" }) {
           <p>Join our platform and grow your customer base!</p>
         </div>
 
-        <Link to={to} className="service-button"> 
+        <button className="service-button" onClick={handleAddService}>
           + Add Your Service
-        </Link>
+        </button>
 
       </div>
     </section>
