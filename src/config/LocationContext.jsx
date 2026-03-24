@@ -9,3 +9,4 @@ export const LocationContext = createContext({
 export function useLocation() {
   return useContext(LocationContext);
 }
+// It would be helpful to export a custom hook like `useLocationContext()` so consuming components do not all import the raw context directly.

@@ -10,3 +10,4 @@ function Home() {
   );
 }
 export default Home;
+//Nice and clean page composition

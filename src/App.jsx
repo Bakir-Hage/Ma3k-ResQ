@@ -9,7 +9,7 @@ import { getUserLocation } from "./config/GoogleMapLogic";
 function App() {
   const [location, setLocation] = useState(null);
   const [locationError, setLocationError] = useState(null);
-
+  //Good use of `useEffect` cleanup with the `cancelled` flag. This shows awareness of async updates after unmount.
   useEffect(() => {
     let cancelled = false;
 

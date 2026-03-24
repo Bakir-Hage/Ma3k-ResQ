@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+//`FiMapPin` and `FiStar` are imported but never used. Remove unused imports to keep the file clean.
 import { FiPhone, FiMapPin, FiStar, FiNavigation, FiMap } from "react-icons/fi";
 import "./ServiceCard.css";
 import { LocationContext } from "../../config/LocationContext";
@@ -6,6 +7,7 @@ import { calculateRouteDistance } from "../../config/GoogleMapLogic";
 
 export default function ServiceCard({ services }) {
   const { location } = useContext(LocationContext); // { lat, lng } or null
+  //`useState(services)` can be valid, but this pattern should be used carefully because it duplicates props into state. Make sure the team understands why they need a separate state here.
   const [sortedServices, setSortedServices] = useState(services);
   const [showPhone, setShowPhone] = useState(null);
 
@@ -74,7 +76,7 @@ export default function ServiceCard({ services }) {
       cancelled = true;
     };
   }, [location, services]);
-  console.log("distance-sorted services", sortedServices);
+  console.log("distance-sorted services", sortedServices); //should be removed
 
   // Fallback: if we haven’t computed yet, just show original order
   const listToRender = sortedServices ?? services;
@@ -92,6 +94,7 @@ export default function ServiceCard({ services }) {
                 : "–"}
             </span>
           </div>
+          {/* Nesting an `<a>` inside a `<button>` is invalid HTML and an accessibility issue. Use either a button that reveals text, or render a link separately. */}
 
           <div className="provider-actions">
             <button

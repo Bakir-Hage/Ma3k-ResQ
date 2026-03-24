@@ -14,6 +14,8 @@
 //   </StrictMode>,
 // );
 
+// Old bootstrapping code is left commented out. Remove dead commented code once the final version is decided, because it makes the entry file harder to read.
+
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
@@ -23,5 +25,5 @@ import router from "./router/router.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

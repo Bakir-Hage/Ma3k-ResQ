@@ -27,6 +27,7 @@ export const signUpNewUser = async (
   phoneNumber,
   userName,
 ) => {
+  //`!latitude` and `!longitude` are risky validations because `0` is falsy in JavaScript. Use `latitude == null` and `longitude == null` instead.
   if (
     !email ||
     !password ||
@@ -70,6 +71,7 @@ export const signInUser = async (email, password) => {
     const UID = userCredential.user.uid;
     return { success: true, UID };
   } catch (error) {
+    // Logging the sign-in error is helpful in development, but make sure production logging is intentional and not noisy.
     console.error("Error signing in user: ", error);
     return { success: false, error: error.message };
   }
@@ -146,6 +148,7 @@ export const getUserServices = async (UID) => {
 
 // Function to add a new service to the services collection in Firestore using UID and service details
 export const addService = async (UID, serviceDetails) => {
+  //Validation only checks that `serviceDetails` exists, not that required fields inside it exist. A stronger review would validate the expected shape before writing to Firestore.
   if (!UID || !serviceDetails) {
     return { success: false, error: "Missing UID or service details" };
   }
@@ -211,3 +214,4 @@ export const getServicesByType = async (serviceType) => {
     return { success: false, error: error.message };
   }
 };
+//This file is doing too much validation manually. Consider extracting small reusable validators or at least standardizing the error message style.

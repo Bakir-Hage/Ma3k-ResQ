@@ -1,6 +1,7 @@
-Import the functions you need from the SDKs you need
+//what is this //Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+//ai
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -13,6 +14,7 @@ const firebaseConfig = {
   storageBucket: import.meta.env.VITE_FIRESTORE_STORAGE_BUCKET,
   messagingSenderId: import.meta.env.VITE_FIRESTORE_MESSAGING_SENDER_ID,
   appId: import.meta.env.VITE_FIRESTORE_APP_ID,
+  //  `measurementId` is hardcoded while the rest comes from env vars. Be consistent: either load it from env or remove it if analytics is not used.
   measurementId: "G-N5VBBHEWMP",
 };
 
@@ -20,3 +22,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 export { app, auth };
+
+//This file is small and should stay very clean, because if config fails the whole app fails.

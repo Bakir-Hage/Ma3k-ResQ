@@ -1,6 +1,7 @@
 import "./ServiceDetailsCard.css";
 import { Star, MapPin, Phone, Map } from "lucide-react";
-
+//`Star` is imported but not used.
+// The prop shape here does not match the Firestore service shape used in `ServiceCard`. This suggests the project currently has two different service object contracts.
 function ServiceDetailsCard({
   name,
   rating,
@@ -10,7 +11,7 @@ function ServiceDetailsCard({
   mapLink,
   isOpen24h,
 }) {
-  const numericRating = Number(rating) || 0;
+  const numericRating = Number(rating) || 0; //`numericRating` is computed but never used. ESLint correctly flags this.
 
   return (
     <div className="service-card">
@@ -20,10 +21,11 @@ function ServiceDetailsCard({
       </div>
 
       <div className="service-info-row">
-
         <div className="distance">
           <MapPin size={18} strokeWidth={1.8} />
           <span>{distance} km</span>
+          {/* `distance` is displayed as `km`, but there is no guarantee that
+          incoming data is already normalized in kilometers. */}
         </div>
       </div>
 

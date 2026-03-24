@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./signinandsignup.css";
 
 export default function LoginAndSignUP() {
+  //File and component name should be `LoginAndSignUp`, not `LoginAndSignUP`, for consistent casing.
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -25,6 +26,7 @@ export default function LoginAndSignUP() {
         <div className="header">
           <h2>Login / Sign Up</h2>
           <p>Join Ma3k ResQ</p>
+          {/* If the close icon is implemented as a clickable `<span>`, it should be a `<button>` instead. */}
           <span
             className="close-button"
             onClick={() => console.log("Close Clicked")}
@@ -120,3 +122,5 @@ export default function LoginAndSignUP() {
     </div>
   );
 }
+
+//  This component would benefit from splitting sign-in and sign-up logic into smaller functions or even custom hooks if it grows further.

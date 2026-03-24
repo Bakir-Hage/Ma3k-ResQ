@@ -28,6 +28,7 @@ export default function EmergencyDispatch() {
       <div className="hero-background">
         <img
           src="src/assets/Truck.jpg"
+          //`src="src/assets/Truck.jpg"` is not the ideal way to use local assets in Vite. Import the image instead.
           alt="Roadside Assistance"
           className="hero-background-image"
         />

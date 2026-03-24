@@ -4,7 +4,7 @@ import ServiceDetails from "../components/ServiceDetails/ServiceDetails";
 import Home from "../pages/Home";
 import GarageParts from "../pages/GarageParts";
 import ServiceListPage from "../pages/ServiceListPage";
-
+//Route paths are written like component names (`ServiceDetails`, `ServiceListPage`). Route URLs should usually be lowercase and user-friendly, for example `/services/:serviceType`.
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,10 +18,11 @@ const router = createBrowserRouter([
         path: "ServiceDetails/:serviceType",
         element: <ServiceDetails />,
       },
-    {
-      path: "ServiceListPage/:serviceType",
-      element: <ServiceListPage />,
-    },
+      {
+        path: "ServiceListPage/:serviceType",
+        element: <ServiceListPage />,
+      },
+      //`ServiceListPage` is rendered as a route page, but that component expects props (`categoryTitle`, `services`). Right now the router does not provide them, so this route is architecturally incomplete.
 
       {
         path: "garage",
@@ -30,6 +31,8 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
+//remove this
 // export default router;
 // import { createBrowserRouter } from "react-router-dom";
 // import ServiceListPage from "../pages/ServiceListPage";

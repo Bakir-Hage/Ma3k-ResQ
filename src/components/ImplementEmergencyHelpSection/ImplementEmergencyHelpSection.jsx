@@ -14,6 +14,7 @@ function ImplementEmergencyHelpSection() {
           </a>
           <a
             href="https://wa.me/+972509091031"
+            //`target="-blank"` is incorrect. It should be `target="_blank"`.
             target="-blank"
             rel="noopener noreferrer"
             className="whatsapp-button"

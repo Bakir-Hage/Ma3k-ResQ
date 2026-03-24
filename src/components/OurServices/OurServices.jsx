@@ -5,6 +5,7 @@ import { SlWrench } from "react-icons/sl";
 import PlacesCard from "../PlacesCard/PlacesCard";
 
 export default function OurServices() {
+  //static data this should come from  firebase
   const services = [
     {
       icon: SlWrench,
